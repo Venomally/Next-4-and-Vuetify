@@ -5,6 +5,9 @@ const astronomyData = ref(null)
 const loading = ref(true)
 const errorMessage = ref(null)
 
+const config = useRuntimeConfig()
+const apiKey = config.public.astronomyApiKey
+
 const fetchData = async () => {
   try {
     const myHeaders = new Headers()
